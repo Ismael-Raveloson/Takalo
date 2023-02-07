@@ -2,7 +2,6 @@
 
 class inscription extends CI_Model {
     
-    
 }
 
 ?>
