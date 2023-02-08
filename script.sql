@@ -58,7 +58,7 @@ INSERT INTO Categories(nomCategories) VALUES("DVD");
 INSERT into Categories(nomCategories) VALUES("vetements homme");
 insert into Categories(nomCategories) VALUES("vetement femme");
 
-INSERT INTO Users(usersname,email,mdp,admin) VALUES("koto","koto@gmailcom","koto01",0);
+INSERT INTO Users(usersname,email,mdp,admin) VALUES("koto","koto@gmail.com","koto01",0);
 INSERT INTO Users(usersname,email,mdp,admin) VALUES("rabe","rabe@gmail.com","rabe01",1);
 INSERT INTO Users(usersname,email,mdp,admin) VALUES("randria","randria@gmail.com","randria01",1);
 INSERT INTO Users(usersname,email,mdp,admin) VALUES("bema","bema@gamil.com","bema01",1);

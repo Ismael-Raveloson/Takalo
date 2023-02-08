@@ -64,8 +64,11 @@
 
             <nav class="amado-nav">
                 <ul>
-                <li><a href="<?php echo base_url('utilisateur/home');?>">ACCEUIL</a></li>
-                    <li><a href="<?php echo base_url('utilisateur/gestionobjet');?>">TOUT MES OBJETS</a></li>
+                    <?php 
+                        $link =  base_url().'utilisateur/gestionobjet/'.$idClient
+                    ?>
+                <li><a href=<?php echo base_url('utilisateur/home');?>>ACCEUIL</a></li>
+                    <li><a href="<?php echo $link ?>">TOUT MES OBJETS</a></li>
                     <li><a href="<?php echo base_url('utilisateur/proposition');?>">Mes Propositions</a></li>
                     <li><a href="<?php echo base_url('utilisateur/deconnexion');?>">DECONNEXION</a></li>
                 </ul>

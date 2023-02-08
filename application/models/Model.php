@@ -24,7 +24,6 @@ class Model extends CI_Model {
         if($num_row >= 1){
             $valiny = true;
         }
-
         return $valiny;
     }
 
@@ -51,7 +50,7 @@ class Model extends CI_Model {
     }
 
     function getAllObjectUser($idUtil){
-        $sql = "SELECT * FROM items WHERE idUsers = %d";
+        $sql = " SELECT * FROM items JOIN USERS ON users.idUsers = items.idUsers WHERE items.idUsers = %d" ;
         $req = sprintf($sql,$idUtil);
         $query = $this->db->query($req);
         $result = array();
@@ -63,7 +62,7 @@ class Model extends CI_Model {
     }
 
     function getDetailProduit($idProduit){
-        $sql = "SELECT * FROM items WHERE idItems = %d";
+        $sql = "SELECT * FROM Items WHERE idItems = %d";
         $req = sprintf($sql,$idProduit);
         $query = $this->db->query($req);
         $result = array();
@@ -75,7 +74,7 @@ class Model extends CI_Model {
     }
 
     function getProduitForAcceuil($idUtil){
-        $sql = "SELECT * FROM items WHERE idUsers != %d";
+        $sql = " SELECT * FROM Items JOIN USERS ON users.idUsers = items.idUsers WHERE items.idUsers != %d";
         $req = sprintf($sql,$idUtil);
         $query = $this->db->query($req);
         $result = array();
@@ -87,7 +86,7 @@ class Model extends CI_Model {
     }
 
     function getAllProduit(){
-        $sql = "SELECT * FROM items ORDER BY RAND() LIMIT 8";
+        $sql = "SELECT * FROM Items ORDER BY RAND() LIMIT 8";
         $query = $this->db->query($sql);
         $result = array();
 
@@ -96,6 +95,7 @@ class Model extends CI_Model {
         }
         return $result;
     }
+
     //ny 1 hoa an'ilay client mandefa
     //ny 2 hoa an'ireo client handefasana
     function proposerEchange($item1,$item2,$user1,$user2){

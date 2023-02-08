@@ -97,12 +97,13 @@ class utilisateur extends CI_Controller {
         $this->load->view('template/backoffice',$data);
     }
 
-    public function gestionobjet(){
+    public function gestionobjet($idUtil = ''){
         $this->load->library('session');
         $this->load->model('Model');
         $this->load->database();
         $this->load->helper('url');
-        $this->load->view('template/gestionobjet');
+        $data['listeProduit'] = $this->Model->getAllObjectUser($idUtil);
+        $this->load->view('template/gestionobjet',$data);
     }   
 
     public function proposition(){
@@ -119,4 +120,7 @@ class utilisateur extends CI_Controller {
         $this->load->helper('url');
         redirect(base_url('utilisateur/index'));
     }
+
+
+
 }

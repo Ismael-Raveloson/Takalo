@@ -102,42 +102,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="cart_product_img">
-                                            <a href="#"><img src="img/bg-img/cart1.jpg" alt="Product"></a>
-                                        </td>
-                                        <td class="cart_product_desc">
-                                            <h5>White Modern Chair</h5>
-                                        </td>
-                                        <td class="price">
-                                            <span>$130</span>
-                                        </td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td class="cart_product_img">
-                                            <a href="#"><img src="img/bg-img/cart2.jpg" alt="Product"></a>
-                                        </td>
-                                        <td class="cart_product_desc">
-                                            <h5>Minimal Plant Pot</h5>
-                                        </td>
-                                        <td class="price">
-                                            <span>$10</span>
-                                        </td>
+                                    <?php foreach($listeProduit as $produit){ ?>
+                                        <tr>
+                                            <td class="cart_product_img">
+                                                <a href="#"><img src="<?php echo base_url(); ?><?php echo $produit['photo']; ?>" alt="Product"></a>
+                                            </td>
+                                            <td class="cart_product_desc">
+                                                <h5><?php echo $produit['nameItems']; ?></h5>
+                                            </td>
+                                            <td class="price">
+                                                <span> <?php echo $produit['priceItems']; ?> $ </span>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
                                     
-                                    </tr>
-                                    <tr>
-                                        <td class="cart_product_img">
-                                            <a href="#"><img src="img/bg-img/cart3.jpg" alt="Product"></a>
-                                        </td>
-                                        <td class="cart_product_desc">
-                                            <h5>Minimal Plant Pot</h5>
-                                        </td>
-                                        <td class="price">
-                                            <span>$10</span>
-                                        </td>
-                               
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>

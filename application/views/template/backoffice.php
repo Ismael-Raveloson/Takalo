@@ -1,5 +1,5 @@
 <?php $idClient = $this->session->userdata('idClient');
-    echo $idClient;
+
 ?>
 
 <!DOCTYPE html>
@@ -65,10 +65,10 @@
 
             <nav class="amado-nav">
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="product-details.html">Utilisateur inscrit</a></li>
-                    <li><a href="cart.html">échange effectué</a></li>
+                <li><a href=<?php echo base_url('utilisateur/home'); ?>>ACCEUIL</a></li>
+                    <li><a href="" >CATEGORIES</a></li>
+                    <li><a href="<?php echo base_url('utilisateur/proposition');?>">UTILISATEUR INSCRIT</a></li>
+                    <li><a href="<?php echo base_url('utilisateur/deconnexion');?>">DECONNEXION</a></li>
                 </ul>
             </nav>
 
