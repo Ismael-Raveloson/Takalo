@@ -31,24 +31,23 @@ class utilisateur extends CI_Controller {
 
             if(empty($email) || empty($mdp)){
                 $error = "Veuillez remplir tout les champs";
-                redirect('utilisateur/index?error='.$error);
+                redirect(base_url('utilisateur/index?error='.$error));
             }else{
                 if($util == 1 && $admin == 1){
                         $id = $this->Model->getUserId($email,$mdp);
-                        $this->session->set_userdata('idClient',$id); 
-                        redirect('utilisateur/backoffice');
+                        $this->session->set_userdata('idClient',$id);
+                        redirect(base_url('utilisateur/backoffice'));
                     }
 
                 if($util == 1 && $admin == 0){
-                        echo 'tsy tonga';
                         $id = $this->Model->getUserId($email,$mdp);
                         $this->session->set_userdata('idClient',$id);
-                        redirect('utilisateur/home');
+                        redirect(base_url('utilisateur/home'));
                     }
                     
                     if($util == 0 && $admin == 0){
                         $error = "Users or password incorrect";
-                        redirect('utilisateur/index?error='.$error);
+                        redirect(base_url('utilisateur/index?error='.$error));
                     }
             }          
     }
@@ -67,33 +66,26 @@ class utilisateur extends CI_Controller {
 
         if(empty($email) || empty($mdp) || empty($anarana)){
             $error = "Veuillez remplir tout les champs";
-            redirect('utilisateur/signup?error='.$error);
+            redirect(base_url('utilisateur/signup?error='.$error));
         }else{
             if($util == 1){
                 $error = "Email déja existant";
-                redirect('utilisateur/signup?error='.$error);
+                redirect(base_url('utilisateur/signup?error='.$error));
             }else{
                 $this->Model->inscription($anarana,$email,$mdp);
-                redirect('utilisateur/index');
+                redirect(base_url('utilisateur/index'));
             }
         }
     }
 
     public function home(){
+        $this->load->helper('url');
         $this->load->view('template/home');
     }
 
     public function backoffice(){
+        $this->load->helper('url');
         $this->load->view('template/backoffice');  
     }
-
-    
-
-
-
-
-
-
-
 
 }

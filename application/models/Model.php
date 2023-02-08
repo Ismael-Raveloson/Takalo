@@ -87,12 +87,52 @@ class Model extends CI_Model {
         return $result;
     }
 
-    //ny 1 hoa an'ilay client connecté
-    //ny 2 hoa an'ireo client hafa
+    //ny 1 hoa an'ilay client mandefa
+    //ny 2 hoa an'ireo client handefasana
     function proposerEchange($item1,$item2,$user1,$user2){
-        $sql = "INSEERT INTO TRANSACTION(idItems1,idItems2,idUsers1,idUsers2) VALUES ('%d','%d','%d','%d') ";
+        $sql = "INSERT INTO TRANSACTIONS(idItems1,idItems2,idUsers1,idUsers2) VALUES ('%d','%d','%d','%d') ";
         $req = sprintf($sql,$item1,$item2,$user1,$user2);
         $this->db->query($req);
+    }
+
+    function getProposition($iduser){
+        $sql = "SELECT * FROM TRANSACTION WHERE idUsers2 = %s";
+        $req = sprintf($sql,$iduser);
+        $query = $this->db->query($req);
+        $result = array();
+
+        foreach($query->result_array() as $row){
+            $result[] = $row;
+        }
+
+        return $result;
+    }
+
+    function acceptProposition($idTransaction){
+        
+    }
+
+    function getAllCategory(){
+        $sql = "SELECT * FROM Categories";
+        $query = $this->db->query($sql);
+        $result = array();
+
+        foreach($query->result_array() as $row){
+            $result[] = $row;
+        }
+
+        return $result;
+    }
+
+    function getItemByCateg($idCateg){
+        $sql="SELECT * FROM Items WHERE idCategories=%d";
+        $query = sprintf($sql,$idCateg);
+        $result = array();
+
+        foreach($query->result_array() as $row){
+            $result[] = $row;
+        }
+        return $result;
     }
     
 }

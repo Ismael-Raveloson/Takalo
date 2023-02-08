@@ -27,7 +27,7 @@
 							<div class="text w-100">
 								<h2>Welcome to login</h2>
 								<p>Don't have an account?</p>
-								<a href="signup" class="btn btn-white btn-outline-white">Sign Up</a>
+								<a href="<?php echo base_url('utilisateur/signup');?>" class="btn btn-white btn-outline-white">Sign Up</a>
 							</div>
 			      </div>
 						<div class="login-wrap p-4 p-lg-5">
@@ -42,7 +42,7 @@
 									</p>
 								</div>
 			      	</div>
-							<form action="logIn" class="signin-form" type="get">
+							<form action="<?php echo base_url('utilisateur/logIn');?>" class="signin-form" type="get">
                                 <div class="form-group mb-3">
                                     <label class="label" for="name">Email</label>
                                     <input type="email" class="form-control" placeholder="Username" name="user">

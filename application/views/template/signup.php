@@ -27,7 +27,7 @@
 							<div class="text w-100">
 								<h2>Welcome to Sign Up</h2>
 								<p>Already have an account?</p>
-								<a href="index" class="btn btn-white btn-outline-white">Sign In</a>
+								<a href="<?php echo base_url('utilisateur/index');?>" class="btn btn-white btn-outline-white">Sign In</a>
 							</div>
 			      </div>
 						<div class="login-wrap p-4 p-lg-5">
@@ -42,7 +42,7 @@
 									</p>
 								</div>
 			      	</div>
-							<form action="inscription" class="signin-form" type="get">
+							<form action="<?php echo base_url('utilisateur/inscription');?>" class="signin-form" type="get">
 								<div class="form-group mb-3">
                                     <label class="label" for="password">Name</label>
                                 <input type="text" class="form-control" placeholder="Name" name="anarana">

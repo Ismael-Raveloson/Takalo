@@ -44,9 +44,11 @@ CREATE TABLE Transactions
 
 CREATE TABLE HistoriqueTransaction(
     idHistorique INT PRIMARY KEY AUTO_INCREMENT,
+    idTransaction INT,
     idItems INT,
     idUsers INT,
     dateHeureEchange TIMESTAMP,
+    FOREIGN KEY(idTransaction) REFERENCES Transactions(idTransaction),
     FOREIGN KEY(idItems) REFERENCES Items(idItems),
     FOREIGN key(idUsers) REFERENCES Users(idUsers)
 );
