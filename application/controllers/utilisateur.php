@@ -97,4 +97,26 @@ class utilisateur extends CI_Controller {
         $this->load->view('template/backoffice',$data);
     }
 
+    public function gestionobjet(){
+        $this->load->library('session');
+        $this->load->model('Model');
+        $this->load->database();
+        $this->load->helper('url');
+        $this->load->view('template/gestionobjet');
+    }   
+
+    public function proposition(){
+        $this->load->library('session');
+        $this->load->model('Model');
+        $this->load->database();
+        $this->load->helper('url');
+        $this->load->view('template/proposition');
+    }   
+
+    public function deconnexion(){
+        $this->load->library('session');
+        $this->session->unset_userdata('idClient');
+        $this->load->helper('url');
+        redirect(base_url('utilisateur/index'));
+    }
 }
