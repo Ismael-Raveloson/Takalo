@@ -72,6 +72,7 @@
                     <li><a href="<?php echo base_url('utilisateur/home');?>">ACCEUIL</a></li>
                     <li><a href="<?php echo base_url('utilisateur/gestionobjet');?>">TOUT MES OBJETS</a></li>
                     <li><a href="<?php echo base_url('utilisateur/proposition');?>">Mes Propositions</a></li>
+                    <li><a href="<?php echo base_url('utilisateur/deconnexion');?>">DECONNEXION</a></li>
                 </ul>
             </nav>
             <!-- Button Group -->
@@ -166,10 +167,6 @@
                             <a href="index.html"><img src="img/core-img/logo2.png" alt=""></a>
                         </div>
                         <!-- Copywrite Text -->
-                        <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->& Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
-</p>
                     </div>
                 </div>
                 <!-- Single Widget Area -->
@@ -181,20 +178,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
                                 <div class="collapse navbar-collapse" id="footerNavContent">
                                     <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Home</a>
+                                    <li class="nav-item">
+                                            <a class="nav-link" href="#">2190-Mandresy</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="shop.html">Shop</a>
+                                            <a class="nav-link" href="#">2227-Riana</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="product-details.html">Product</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="cart.html">Cart</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="checkout.html">Checkout</a>
+                                            <a class="nav-link" href="#">2219-Ismaël</a>
                                         </li>
                                     </ul>
                                 </div>

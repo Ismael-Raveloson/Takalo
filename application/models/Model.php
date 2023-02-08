@@ -50,7 +50,7 @@ class Model extends CI_Model {
     }
 
     function getAllObjectUser($idUtil){
-        $sql = " SELECT * FROM items JOIN USERS ON users.idUsers = items.idUsers WHERE items.idUsers = %d" ;
+        $sql = " SELECT * FROM Items JOIN Users ON Users.idUsers = Items.idUsers WHERE Items.idUsers = %d" ;
         $req = sprintf($sql,$idUtil);
         $query = $this->db->query($req);
         $result = array();
@@ -74,7 +74,7 @@ class Model extends CI_Model {
     }
 
     function getProduitForAcceuil($idUtil){
-        $sql = " SELECT * FROM Items JOIN USERS ON users.idUsers = items.idUsers WHERE items.idUsers != %d";
+        $sql = " SELECT * FROM Items JOIN Users ON Users.idUsers = Items.idUsers WHERE Items.idUsers != %d";
         $req = sprintf($sql,$idUtil);
         $query = $this->db->query($req);
         $result = array();
@@ -99,7 +99,7 @@ class Model extends CI_Model {
     //ny 1 hoa an'ilay client mandefa
     //ny 2 hoa an'ireo client handefasana
     function proposerEchange($item1,$item2,$user1,$user2){
-        $sql = "INSERT INTO TRANSACTIONS(idItems1,idItems2,idUsers1,idUsers2) VALUES ('%d','%d','%d','%d') ";
+        $sql = "INSERT INTO Transactions(idItems1,idItems2,idUsers1,idUsers2) VALUES ('%d','%d','%d','%d') ";
         $req = sprintf($sql,$item1,$item2,$user1,$user2);
         $this->db->query($req);
     }
