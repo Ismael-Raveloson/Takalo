@@ -42,6 +42,15 @@ CREATE TABLE Transactions
     FOREIGN KEY(idUsers2)REFERENCES Users(idUsers)
 ); 
 
+CREATE TABLE HistoriqueTransaction(
+    idHistorique INT PRIMARY KEY AUTO_INCREMENT,
+    idItems INT,
+    idUsers INT,
+    dateHeureEchange TIMESTAMP,
+    FOREIGN KEY(idItems) REFERENCES Items(idItems),
+    FOREIGN key(idUsers) REFERENCES Users(idUsers)
+);
+
 INSERT INTO Categories(nomCategories) VALUES("Livre");
 INSERT INTO Categories(nomCategories) VALUES("DVD");
 INSERT into Categories(nomCategories) VALUES("vetements homme");

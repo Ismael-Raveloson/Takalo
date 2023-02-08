@@ -25,15 +25,15 @@
 					<div class="wrap d-md-flex">
 						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 							<div class="text w-100">
-								<h2>Welcome to login</h2>
-								<p>Don't have an account?</p>
-								<a href="signup" class="btn btn-white btn-outline-white">Sign Up</a>
+								<h2>Welcome to Sign Up</h2>
+								<p>Already have an account?</p>
+								<a href="index" class="btn btn-white btn-outline-white">Sign In</a>
 							</div>
 			      </div>
 						<div class="login-wrap p-4 p-lg-5">
 			      	<div class="d-flex">
 			      		<div class="w-100">
-			      			<h3 class="mb-4">Sign In</h3>
+			      			<h3 class="mb-4">Sign Up</h3>
 			      		</div>
 								<div class="w-100">
 									<p class="social-media d-flex justify-content-end">
@@ -42,8 +42,12 @@
 									</p>
 								</div>
 			      	</div>
-							<form action="logIn" class="signin-form" type="get">
-                                <div class="form-group mb-3">
+							<form action="inscription" class="signin-form" type="get">
+								<div class="form-group mb-3">
+                                    <label class="label" for="password">Name</label>
+                                <input type="text" class="form-control" placeholder="Name" name="anarana">
+                                </div>
+								<div class="form-group mb-3">
                                     <label class="label" for="name">Email</label>
                                     <input type="email" class="form-control" placeholder="Username" name="user">
                                 </div>
@@ -52,9 +56,9 @@
                                 <input type="password" class="form-control" placeholder="Password" name="password">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
-                                <!-- </div>
-                                <div class="form-group d-md-flex">
+                                    <button type="submit" class="form-control btn btn-primary submit px-3">Sign Up</button>
+                                </div>
+                                <!--<div class="form-group d-md-flex">
                                     <div class="w-50 text-left">
                                         <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
                                                 <input type="checkbox" checked>
