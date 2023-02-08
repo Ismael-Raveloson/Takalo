@@ -1,9 +1,7 @@
-<?php $idClient = $this->session->userdata('idClient');
-
-?>
+<?php $idClient = $this->session->userdata('idClient'); ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<hvtml lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -23,7 +21,7 @@
 </head>
 
 <body>
-
+    
     <div class="search-wrapper section-padding-100">
         <div class="search-close">
             <i class="fa fa-close" aria-hidden="true"></i>
@@ -143,4 +141,4 @@
 
 </body>
 
-</html>
+</hvtml>
