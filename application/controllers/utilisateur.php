@@ -42,7 +42,7 @@ class utilisateur extends CI_Controller {
                 if($util == 1 && $admin == 0){
                         $id = $this->Model->getUserId($email,$mdp);
                         $this->session->set_userdata('idClient',$id);
-                        redirect(base_url('utilisateur/home'));
+                        redirect(base_url('utilisateur/home?rc='.$id));
                     }
                     
                     if($util == 0 && $admin == 0){
@@ -79,13 +79,22 @@ class utilisateur extends CI_Controller {
     }
 
     public function home(){
+        $this->load->library('session');
+        $this->load->model('Model');
+        $this->load->database();
         $this->load->helper('url');
-        $this->load->view('template/home');
+        $id = $this->input->get("rc");
+        $data['listeProduit'] = $this->Model->getProduitForAcceuil($id);
+        $this->load->view('template/home',$data);
     }
 
     public function backoffice(){
+        $this->load->library('session');
+        $this->load->model('Model');
+        $this->load->database();
         $this->load->helper('url');
-        $this->load->view('template/backoffice');  
+        $data['listeProduit'] = $this->Model->getAllProduit();  
+        $this->load->view('template/backoffice',$data);
     }
 
 }

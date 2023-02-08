@@ -83,10 +83,19 @@ class Model extends CI_Model {
         foreach($query->result_array() as $row){
             $result[] = $row;
         }
-
         return $result;
     }
 
+    function getAllProduit(){
+        $sql = "SELECT * FROM items ORDER BY RAND() LIMIT 8";
+        $query = $this->db->query($sql);
+        $result = array();
+
+        foreach($query->result_array() as $row){
+            $result[] = $row;
+        }
+        return $result;
+    }
     //ny 1 hoa an'ilay client mandefa
     //ny 2 hoa an'ireo client handefasana
     function proposerEchange($item1,$item2,$user1,$user2){
